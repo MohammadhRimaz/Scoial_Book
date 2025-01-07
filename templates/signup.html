@@ -136,7 +136,14 @@
               <a href="#"> Terms</a>
               <a href="#"> Privacy</a>
             </div>
-            <p class="capitalize">© copyright 2024 by Rimaz</p>
+            <p class="capitalize">
+              © copyright <span id="year"></span> by Rimaz
+            </p>
+            <scripts>
+              <!-- Get the current year and set it in the span -->
+              const yearSpan = document.getElementById('year');
+              yearSpan.textContent = new Date().getFullYear();
+            </scripts>
           </div>
         </div>
       </div>
@@ -144,6 +151,7 @@
 
     <!-- Scripts
     ================================================== -->
+
     <script src="{% static 'assets/js/tippy.all.min.js' %}"></script>
     <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'assets/js/uikit.js' %}"></script>
